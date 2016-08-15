@@ -12,7 +12,7 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -32,13 +32,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" data-bind="click: refresh">TwitchTV <i class="fa fa-refresh"></i></a>
+                    <a class="navbar-brand" href="#" data-bind="click: refreshStreams">TwitchTV <i class="fa fa-refresh"></i></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li id="all" class="active"><a href="#all" data-bind="click: clickSelection">All</a></li>
-                        <li id="online"><a href="#online" data-bind="click: clickSelection">Online</a></li>
-                        <li id="offline"><a href="#offline" data-bind="click: clickSelection">Offline</a></li>
+                        <!-- <li id="all" class="active"><a href="#all" data-bind="click: clickSelection">All</a></li> -->
+                        <li id="all" data-bind="css: {active: selection() == '#all'}"><a href="#all" data-bind="click: clickSelection">All</a></li>
+                        <!-- <li id="online"><a href="#online" data-bind="click: clickSelection">Online</a></li> -->
+                        <li id="online" data-bind="css: {active: selection() == '#online'}"><a href="#online" data-bind="click: clickSelection">Online</a></li>
+                        <li id="offline" data-bind="css: {active: selection() == '#offline'}"><a href="#offline" data-bind="click: clickSelection">Offline</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,9 +68,9 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-    <script src="https://use.fontawesome.com/7e16f9c758.js"></script>
+    <script src="//use.fontawesome.com/7e16f9c758.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
