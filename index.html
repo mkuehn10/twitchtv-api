@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><title>twitchtv api</title><link rel="apple-touch-icon" href="apple-touch-icon.png"><!-- Place favicon.ico in the root directory --><link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="styles/main.css"></head><body><!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--><div class="container"><nav class="navbar navbar-inverse navbar-static-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#" data-bind="click: refreshStreams">TwitchTV <i class="fa fa-refresh"></i></a></div><div id="navbar" class="navbar-collapse collapse"><ul class="nav navbar-nav navbar-right"><!-- <li id="all" class="active"><a href="#all" data-bind="click: clickSelection">All</a></li> --><li id="all" data-bind="css: {active: selection() == '#all'}"><a href="#all" data-bind="click: clickSelection">All</a></li><!-- <li id="online"><a href="#online" data-bind="click: clickSelection">Online</a></li> --><li id="online" data-bind="css: {active: selection() == '#online'}"><a href="#online" data-bind="click: clickSelection">Online</a></li><li id="offline" data-bind="css: {active: selection() == '#offline'}"><a href="#offline" data-bind="click: clickSelection">Offline</a></li></ul></div></div></nav><div class="row" data-bind="foreach: filterResults($root.selection())"><div class="col-xs-12 col-sm-6 col-md-4"><div class="col-xs-12 result text-center" data-bind="css: userStatus()"><p data-bind="text: username"></p><img class="logo" data-bind="attr: {src: thumbnail}"><p data-bind="text: createGameStatus()"></p></div></div></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-80275020-1');
+    ga('send', 'pageview');</script><script src="//code.jquery.com/jquery-3.1.0.min.js"></script><script src="//maxcdn.bootstrapcdn.com
+/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script><script src="//use.fontawesome.com/7e16f9c758.js"></script><script src="scripts/main.js"></script></body></html>
