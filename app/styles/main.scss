@@ -31,8 +31,31 @@ body {
     /*padding-left: 15px;*/
 }
 
+.result {
+    margin: 2px 0;
+    font-weight: bold;
+    color: white;
+}
+
+.online {
+    background-color: limegreen;
+}
+
+.offline {
+    background-color: tomato;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
 @media screen and (min-width: 768px) {
     .navbar-header {
         /*padding-left: 15px;*/
+    }
+    .result {
+        margin: 15px 0;
     }
 }
